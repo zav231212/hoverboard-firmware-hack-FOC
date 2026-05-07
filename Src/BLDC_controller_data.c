@@ -194,7 +194,7 @@ P rtP_Left = {
   /* Variable: t_errQual
    * Referenced by: '<S20>/t_errQual'
    */
-  1280U,
+  0U,
 
   /* Variable: Vd_max
    * Referenced by:
@@ -271,7 +271,7 @@ P rtP_Left = {
   /* Variable: r_errInpTgtThres
    * Referenced by: '<S20>/r_errInpTgtThres'
    */
-  9600,
+  0x7FFFFFFF,
 
   /* Variable: r_fieldWeakHi
    * Referenced by: '<S42>/r_fieldWeakHi'
