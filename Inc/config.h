@@ -511,8 +511,8 @@
   #define FEEDBACK_SERIAL_USART3            // Tx to   right sensor board: for LED battery indication. Comment-out if sideboard is not used!
 
   #define DUAL_INPUTS                       // ADC*(Primary) + Sideboard_R(Auxiliary). Uncomment this to use Dual-inputs
-  #define PRI_INPUT1              1, 200, 0, 2500, 0  // Pedal Brake – ручные пределы
-  #define PRI_INPUT2              1, 200, 0, 2500, 0  // Pedal Accel – ручные пределы
+  #define PRI_INPUT1              3, 0, 0, 4095, 0  // Pedal Brake – ручные пределы
+  #define PRI_INPUT2              3, 0, 0, 4095, 0  // Pedal Accel – ручные пределы
   #define AUX_INPUT1              2, -1000, 0, 1000, 0  // Sideboard Steer
   #define AUX_INPUT2              2, -1000, 0, 1000, 0  // Sideboard Speed
 
@@ -612,7 +612,7 @@
 */
   #define FLASH_WRITE_KEY     0x1010    // Flash memory writing key. Change this key to ignore the input calibrations from the flash memory and use the ones in config.h
   #undef  CTRL_MOD_REQ
-  #define CTRL_MOD_REQ        TRQ_MODE  // SKATEBOARD works best in TORQUE Mode
+  //#define CTRL_MOD_REQ        TRQ_MODE  // SKATEBOARD works best in TORQUE Mode
   // #define CONTROL_PWM_LEFT    0         // use RC PWM as input on the LEFT cable. Number indicates priority for dual-input. Disable DEBUG_SERIAL_USART2!
   #define CONTROL_PWM_RIGHT   0         // use RC PWM as input on the RIGHT cable.  Number indicates priority for dual-input. Disable DEBUG_SERIAL_USART3!
 
