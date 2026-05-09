@@ -149,7 +149,7 @@
 // Control selections
 #define CTRL_TYP_SEL    FOC_CTRL        // [-] Control type selection: COM_CTRL, SIN_CTRL, FOC_CTRL (default)
 #define CTRL_MOD_REQ    TRQ_MODE        // [-] Control mode request: OPEN_MODE, VLT_MODE (default), SPD_MODE, TRQ_MODE. Note: SPD_MODE and TRQ_MODE are only available for CTRL_FOC!
-#define DIAG_ENA        1               // [-] Motor Diagnostics enable flag: 0 = Disabled, 1 = Enabled (default)
+#define DIAG_ENA        0               // [-] Motor Diagnostics enable flag: 0 = Disabled, 1 = Enabled (default)
 
 // Limitation settings
 #define I_MOT_MAX       23              // [A] Maximum single motor current limit
@@ -503,14 +503,14 @@
 
 // ############################ VARIANT_HOVERCAR SETTINGS ############################
 #ifdef VARIANT_HOVERCAR
-  #define FLASH_WRITE_KEY         0x5555  // Изменён, чтобы сбросить старую калибровку
+  #define FLASH_WRITE_KEY         0x7777  // Изменён, чтобы сбросить старую калибровку
   #undef  CTRL_MOD_REQ
   #define CTRL_MOD_REQ            TRQ_MODE  // HOVERCAR works best in TORQUE Mode. VOLTAGE mode is preffered when freewheeling is not desired when throttle is released.
-  #define CONTROL_ADC             0         // use ADC as input. Number indicates priority for dual-input. Disable CONTROL_SERIAL_USART2, FEEDBACK_SERIAL_USART2, DEBUG_SERIAL_USART2!
+  #define CONTROL_ADC             1         // use ADC as input. Number indicates priority for dual-input. Disable CONTROL_SERIAL_USART2, FEEDBACK_SERIAL_USART2, DEBUG_SERIAL_USART2!
   #define SIDEBOARD_SERIAL_USART3 1         // Rx from right sensor board: to use photosensors as buttons. Number indicates priority for dual-input. Comment-out if sideboard is not used!
   #define FEEDBACK_SERIAL_USART3            // Tx to   right sensor board: for LED battery indication. Comment-out if sideboard is not used!
 
-  #define DUAL_INPUTS                       // ADC*(Primary) + Sideboard_R(Auxiliary). Uncomment this to use Dual-inputs
+  //#define DUAL_INPUTS                       // ADC*(Primary) + Sideboard_R(Auxiliary). Uncomment this to use Dual-inputs
   #define PRI_INPUT1              3, 0, 0, 4095, 0  // Pedal Brake – автоопределение
   #define PRI_INPUT2              3, 0, 0, 4095, 0  // Pedal Accel – автоопределение
   #define AUX_INPUT1              0, -1000, 0, 1000, 0  // Sideboard Steer
