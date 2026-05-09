@@ -152,8 +152,8 @@
 #define DIAG_ENA        0               // [-] Motor Diagnostics enable flag: 0 = Disabled, 1 = Enabled (default)
 
 // Limitation settings
-#define I_MOT_MAX       20              // [A] Maximum single motor current limit
-#define I_DC_MAX        22              // [A] Maximum stage2 DC Link current limit for Commutation and Sinusoidal types (This is the final current protection. Above this value, current chopping is applied. To avoid this make sure that I_DC_MAX = I_MOT_MAX + 2A)
+#define I_MOT_MAX       23              // [A] Maximum single motor current limit
+#define I_DC_MAX        25              // [A] Maximum stage2 DC Link current limit for Commutation and Sinusoidal types (This is the final current protection. Above this value, current chopping is applied. To avoid this make sure that I_DC_MAX = I_MOT_MAX + 2A)
 #define N_MOT_MAX       1500            // [rpm] Maximum motor speed limit
 
 // Field Weakening / Phase Advance
@@ -519,8 +519,8 @@
   #define SPEED_COEFFICIENT       16384     // 1.0f
   #define STEER_COEFFICIENT       8192      // 0.5f Only active in Sideboard input
   // #define ADC_ALTERNATE_CONNECT             // use to swap ADC inputs
-  // #define INVERT_R_DIRECTION                // Invert rotation of right motor
-  // #define INVERT_L_DIRECTION                // Invert rotation of left motor
+   #define INVERT_R_DIRECTION                // Invert rotation of right motor
+   #define INVERT_L_DIRECTION                // Invert rotation of left motor
   // #define DEBUG_SERIAL_USART3               // right sensor board cable, disable if I2C (nunchuk or lcd) is used!
 
   // Extra functionality
